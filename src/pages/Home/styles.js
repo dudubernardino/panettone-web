@@ -1,6 +1,65 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-top: 50px;
+
+  h3 {
+    color: #ffffff;
+    font-size: 42px;
+    margin: 20px 0 0;
+  }
+`;
+
+export const Intro = styled.div`
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  background: #ffffff;
+  width: 100%;
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    max-width: 700px;
+
+    h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      color: #064ba5;
+    }
+
+    p {
+      text-align: justify;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  @media(min-width: 1200px) {
+    flex-direction: row;
+    justify-content: center;
+
+    .text {
+      padding: 30px;
+      max-width: 450px;
+    }
+
+    img {
+      max-width: 900px;
+    }
+  }
+`;
+
+export const Catalog = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +89,7 @@ export const Card = styled.div`
 
   @media(min-width: 765px) {
     max-width: 400px;
-    margin-right: 50px;
+    margin-right: 15px;
   }
 
   .content {

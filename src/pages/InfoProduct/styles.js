@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 15px;
+  padding-top: 140px;
 
   @media(min-width: 765px) {
     flex-direction: row;
@@ -29,6 +29,10 @@ export const Card = styled.div`
 
   @media(min-width: 765px) {
     max-width: 900px;
+
+    img {
+
+    }
   }
 
   .content {
@@ -44,6 +48,7 @@ export const Card = styled.div`
 
     img {
       width: 200px;
+      pointer-events: none;
     }
 
     .info {
@@ -78,11 +83,7 @@ export const Card = styled.div`
 export const Table = styled.table`
   width: 250px;
   align-self: center;
-
-  @media(min-width: 765px) {
-    margin: -30px 80px 10px;
-    align-self: flex-end;
-  }
+  margin-top: 15px;
 
   td, th {
     border: 1px solid #dddddd;

@@ -32,35 +32,35 @@ export default function InfoProduct() {
               <span>{panettone.name}</span>
               <span>R$ {panettone.price}</span>
               <span>Marca: {panettone.brand}</span>
+
+              <Table>
+                <tr>
+                  <th>Carboidratos: </th>
+                  <td>{nutriInfo.carb}</td>
+                </tr>
+                <tr>
+                  <th>Proteínas: </th>
+                  <td>{nutriInfo.protein}</td>
+                </tr>
+                <tr>
+                  <th>Gordura Saturada: </th>
+                  <td>{nutriInfo.saturatedFat}</td>
+                </tr>
+                <tr>
+                  <th>Gordura Total: </th>
+                  <td>{nutriInfo.totalFat}</td>
+                </tr>
+                <tr>
+                  <th>Fibras: </th>
+                  <td>{nutriInfo.fiber}</td>
+                </tr>
+                <tr>
+                  <th>Sódio: </th>
+                  <td>{nutriInfo.sodium}</td>
+                </tr>
+              </Table>
             </div>
           </div>
-
-          <Table>
-            <tr>
-              <th>Carboidratos: </th>
-              <td>{nutriInfo.carb}</td>
-            </tr>
-            <tr>
-              <th>Proteínas: </th>
-              <td>{nutriInfo.protein}</td>
-            </tr>
-            <tr>
-              <th>Gordura Saturada: </th>
-              <td>{nutriInfo.saturatedFat}</td>
-            </tr>
-            <tr>
-              <th>Gordura Total: </th>
-              <td>{nutriInfo.totalFat}</td>
-            </tr>
-            <tr>
-              <th>Fibras: </th>
-              <td>{nutriInfo.fiber}</td>
-            </tr>
-            <tr>
-              <th>Sódio: </th>
-              <td>{nutriInfo.sodium}</td>
-            </tr>
-          </Table>
         </Card>
     </Container>
     </div>
