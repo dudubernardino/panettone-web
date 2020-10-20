@@ -17,10 +17,10 @@ export default function Header() {
           <Profile>
             <div>
               <strong>Eduardo</strong>
-              <Link to="/profile">Meu perfil</Link>
+              <a>Meu carrinho</a>
             </div>
             <img
-              src="https://api.adorable.io/avatars/50/abott@adorable.png"
+              src="https://f088b146830a59b5.cdn.gocache.net/uploads/noticias/2020/03/10/cpsi51o6lwhd.jpg"
               alt=""
             />
           </Profile>

@@ -7,6 +7,9 @@ import { Container, Intro, Catalog, Card } from './styles';
 
 export default function Home() {
   const [panettones, setPanettones] = useState([]);
+  const [search, setSearch] = useState('');
+  const [filteredPanettones, setFilteredPanettones] = useState([]);
+  const length = filteredPanettones.length;
 
   useEffect(() => {
     const getData = async () => {
@@ -16,6 +19,15 @@ export default function Home() {
 
     getData();
   }, []);
+
+  useEffect(() => {
+    setFilteredPanettones(
+      panettones.filter( panettone => {
+        return panettone.brand.toLowerCase().includes(search.toLowerCase())
+      })
+    )
+  }, [search, panettones]);
+
   return (
     <Container>
       <Intro>
@@ -27,8 +39,9 @@ export default function Home() {
       </Intro>
 
       <h3>Catálogo</h3>
+      <input type="text" placeholder="buscar..." onChange={e => setSearch(e.target.value)} />
       <Catalog>
-        {panettones.map(p => (
+        {length > 0 ? filteredPanettones.map(p => (
           <Card key={p.id}>
             <div className="content">
               <img src={p.imgUrl}/>
@@ -38,8 +51,10 @@ export default function Home() {
                 <span>Marca: {p.brand}</span>
               </div>
             </div>
-      </Card>
-        ))}
+          </Card>
+        )) : (
+          <p>Marca de panetone não disponível.</p>
+        )}
       </Catalog>
     </Container>
   );

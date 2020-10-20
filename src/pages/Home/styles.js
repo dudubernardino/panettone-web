@@ -11,6 +11,14 @@ padding-top: 50px;
     font-size: 42px;
     margin: 20px 0 0;
   }
+
+  input {
+    padding: 6px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 15px;
+    box-shadow: 0px 0px 5px #fff;
+  }
 `;
 
 export const Intro = styled.div`
@@ -65,6 +73,13 @@ export const Catalog = styled.div`
   align-items: center;
   width: 100%;
   padding: 15px;
+
+  p {
+    font-size: 18px;
+    padding: 10px;
+    font-weight: bold;
+    color: #ffffff;
+  }
 
   @media(min-width: 765px) {
     flex-direction: row;
