@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import api from '../../services/api';
 
-// import { Container } from './styles';
+import { Link } from 'react-router-dom';
 
-function Home() {
+import { Container, Card } from './styles';
+
+export default function Home() {
   const [panettones, setPanettones] = useState([]);
 
   useEffect(() => {
@@ -15,15 +17,19 @@ function Home() {
     getData();
   }, []);
   return (
-    <div>{panettones.map(p => (
-      <div key={p.id}>
-        <p>{p.id}</p>
-        <p>{p.name}</p>
-      </div>
-
-    ))
-    }</div>
+    <Container>
+      {panettones.map(p => (
+        <Card key={p.id}>
+          <div className="content">
+            <img src={p.imgUrl}/>
+            <div className="info">
+              <Link to={`/panettone/${p.id}`}>{p.name}</Link>
+              <span>R$ {p.price}</span>
+              <span>Marca: {p.brand}</span>
+            </div>
+          </div>
+        </Card>
+        ))}
+    </Container>
   );
 }
-
-export default Home;
