@@ -39,7 +39,7 @@ export default function Home() {
       </Intro>
 
       <h3>Catálogo</h3>
-      <input type="text" placeholder="buscar..." onChange={e => setSearch(e.target.value)} />
+      <input type="text" placeholder="buscar marca..." onChange={e => setSearch(e.target.value)} />
       <Catalog>
         {length > 0 ? filteredPanettones.map(p => (
           <Card key={p.id}>
