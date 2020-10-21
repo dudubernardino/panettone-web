@@ -44,7 +44,7 @@ export default function Home() {
         {length > 0 ? filteredPanettones.map(p => (
           <Card key={p.id}>
             <div className="content">
-              <img src={p.imgUrl}/>
+              <Link to={`/panettone/${p.id}`}><img src={p.imgUrl}/></Link>
               <div className="info">
                 <Link to={`/panettone/${p.id}`}>{p.name}</Link>
                 <span>R$ {p.price}</span>
